@@ -1,0 +1,12 @@
+logs
+target
+/.idea
+/.idea_modules
+/.classpath
+/.project
+/.settings
+/RUNNING_PID
+
+\.gradle/4\.9/fileHashes/
+
+*.iml

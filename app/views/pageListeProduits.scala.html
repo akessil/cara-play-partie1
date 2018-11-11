@@ -1,0 +1,29 @@
+@(titre: String)
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>@titre</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+        <script type="text/javascript" src='@routes.Assets.versioned("javascripts/jquery/jquery-3.3.1.min.js")'></script>
+        <script type="text/javascript" src='@routes.Assets.versioned("javascripts/pageListProduits.js")'></script>
+
+    </head>
+    <body>
+        <header>
+            <a href="@routes.Partie1Controller.listeProduits" id="precedant"> Partie 1 </a>
+            <div id="titre"><h1>@titre</h1></div>
+            <a href="@routes.TemplatesController.pageTestPerf" id="suivant">test Performance></a>
+        </header>
+        <div id="control">
+            <input type="radio" id="synchrone" name="load" value="2" checked> <label for="synchrone">Synchrone</label>
+            <input type="radio" id="asynchrone" name="load" value="3" > <label for="synchrone">Asynchrone</label>
+            <button id="reload">Charger</button>
+        </div>
+
+        <div id="container-produit">
+            <p> </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+@(titre: String)
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>@titre</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+        <script type="text/javascript" src='@routes.Assets.versioned("javascripts/jquery/jquery-3.3.1.min.js")'></script>
+        <script type="text/javascript" src='@routes.Assets.versioned("javascripts/PageTestPerf.js")'></script>
+    </head>
+    <body>
+        <header>
+            <a href="@routes.TemplatesController.pageListeProduits" id="precedant"> Chargement produits </a>
+            <div id="titre"><h1>@titre</h1></div>
+        </header>
+
+        <div id="stat">
+            <div class="param">
+                <label for="time-between-requests"> Temps entre les requètes en ms</label> <input type="number" id="time-between-requests">
+                <label for="time-test"> Temps de test en ms</label> <input type="number" id="time-test">
+                <button id="test-btn"> Tester </button>
+            </div>
+
+            <div >
+
+                <div class="test-perf-result">
+                    <h3> Synchrone </h3>
+                    <p> Nombre de requetes Reçues <span id="nb-request-sync"> </span></p>
+                    <p> Le temps de réponse moyen Global  <span id="time-average-sync"> </span></p>
+                    <p> Le temps de réponse moyen Par requète  <span id="time-average-sync-per-request"> </span></p>
+                </div>
+
+                <div class="test-perf-result">
+                    <h3> Asynchrone </h3>
+                    <p> Nombre de requetes Reçues <span id="nb-request-async"> </span></p>
+                    <p> Le temps de réponse moyen Global <span id="time-average-async"> </span></p>
+                    <p> Le temps de réponse moyen Par requète  <span id="time-average-async-per-request"> </span></p>
+                </div>
+
+            </div>
+
+        </div>
+    </body>
+</html>

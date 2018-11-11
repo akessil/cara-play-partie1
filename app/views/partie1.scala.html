@@ -1,0 +1,31 @@
+@(produits: List[model.Produit], titre: String)
+@*TODO : Vous devez recuperer les parametres fournis par le controller (produits, titre)*@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @*TODO: placez le titre dans cette balise*@
+        <title>@titre</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+    </head>
+    <body>
+        <header>
+            <a href="@routes.InitController.index" id="precedant"> Installation </a>
+            @*TODO: placez le titre dans cette balise*@
+            <div id="titre"><h1>@titre</h1></div>
+            @*TODO: utiliser le reverse router pour acceder a la partie2*@
+            <a href="/" id="suivant">Partie 2></a>
+        </header>
+        <div id="container-produit">
+         @*TODO: Iterez sur les produits*@
+            <div class="produit">
+                @*TODO: Affichez le nom du produit, son image, son prix et sa description*@
+                <h2>TODO:nom</h2>
+                <img src='/assets/produits/produit0.jpg' alt="produit" height="300" width="300">
+                <p>Ce poduit est disponnible au prix de ? €</p>
+                <p>todo:description</p>
+            </div>
+        </div>
+    </body>
+</html>
